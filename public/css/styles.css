@@ -80,7 +80,7 @@ nav {
     display: flex;
     flex-direction: row;
     list-style: none;
-    font-size: 1.75rem;
+    font-size: 1rem;
     font-family: var(--heading-font);
 
     & a {
@@ -207,7 +207,11 @@ footer {
   /******* HEADER ***************/
 
   /******* NAVIGATION ***************/
-  
+  nav {
+    & li {
+      font-size: 2rem;
+    }
+  }
   /******* MAIN ***************/
   .hero-info {
     margin: 3rem;
