@@ -1,0 +1,12 @@
+<!-- Content Heading -->
+ <% if (title) { %>
+<h1><%= title  %></h1>
+<% } else {
+    res.redirect('/')
+} %>
+
+<!-- message block to display a message in case of errors -->
+ <%# messages() %>
+
+ <!-- Grid section to display the grid content of the vehicle inventory -->
+ <%- grid %>
