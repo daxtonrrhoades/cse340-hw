@@ -70,10 +70,11 @@ nav {
   background-color: var(--accent-color1);
   color: var(--accent-color3);
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 
   & ul {
     display: flex;
+    
   }
 
   & li {
@@ -97,6 +98,7 @@ nav {
 }
 
 /******* MAIN ***************/
+/* hero */
 .hero {
   margin-left: 2rem;
   display: flex;
@@ -128,7 +130,7 @@ nav {
     text-decoration: none;
   }
 }
-
+/* main content */
 .display {
   display: flex;
   flex-direction: column-reverse;
@@ -183,6 +185,25 @@ nav {
     font-family: var(--main-font);
   }
 }
+
+/* Inventory Display */
+#inv-display {
+  list-style: none;
+
+  & li {
+    border: 2px solid var(--secondary-color);
+    border-radius: 1.25rem;
+    padding: 8px;
+    margin: 1.2rem;
+    text-align: center;
+    
+  }
+
+  & hr {
+    border: 3px solid var(--accent-color1);
+  }
+}
+
 /******* FOOTER ***************/
 footer {
   color: var(--accent-color1);
@@ -226,5 +247,11 @@ footer {
 
   .reviews {
     font-size: 1.5rem;
+  }
+
+  /* Inventory Display */
+  #inv-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 }
