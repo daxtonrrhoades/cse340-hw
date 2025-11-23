@@ -37,9 +37,9 @@ Util.buildClassificationGrid = async function (data) {
             + '" title="View ' + vehicle.inv_make + ' ' + vehicle.inv_model
             + 'details"><img src="' + vehicle.inv_thumbnail
             + '" alt="Image of ' + vehicle.inv_make + ' ' + vehicle.inv_model
-            + ' on CSE Motors" /></a>'
+            + ' on CSE Motors"></a>'
             grid += '<div class="namePrice">'
-            grid += '<hr />'
+            grid += '<hr>'
             grid += '<h2>'
             grid += '<a href="../../inv/detail/' + vehicle.inv_id + '" title="View '
             + vehicle.inv_make + ' ' + vehicle.inv_model + ' details">'
@@ -57,6 +57,33 @@ Util.buildClassificationGrid = async function (data) {
     return grid
 }
 
+/* **************************************
+* Build the vehicle detail view HTML
+* ************************************ */
+Util.buildVehicleDetailHTML = async function (vehicle) {
+    let vehicleDetail
+    if (vehicle) {
+        vehicleDetail = `
+        <div class="vehicle-detail-container">
+            <div class="vehicle-image">
+                <img src="${vehicle.inv_image}" alt="${vehicle.make}${vehicle.model}" >
+            </div>
+            <div class="vehicle-info">
+                <h1>${vehicle.inv_make} ${vehicle.inv_model}</h1>
+                    <p><strong>Year:</strong> ${vehicle.inv_year}</p>
+                    <p><strong>Price:</strong> $${Intl.NumberFormat('en-US').format(vehicle.inv_price)}</p>
+                    <p><strong>Mileage:</strong> ${Intl.NumberFormat("en-US").format(vehicle.inv_miles)} miles</p>
+                    <p><strong>Description:</strong> ${vehicle.inv_description}</p>
+                    <p><strong>Color:</strong> ${vehicle.inv_color}</p>
+                </div>
+            </div>
+        `;
+    } else {
+        vehicleDetail = '<p class="notice">Sorry, no matching vehicles could be found.</p>'
+    }
+    return vehicleDetail;
+}
+
 /* ****************************************
  * Middleware For Handling Errors
  * Wrap other function in this for 
@@ -64,4 +91,4 @@ Util.buildClassificationGrid = async function (data) {
  **************************************** */
 Util.handleErrors = fn => (req, res, next) =>Promise.resolve(fn(req, res, next)).catch(next)
 
-module.exports = Util
+module.exports = Util;

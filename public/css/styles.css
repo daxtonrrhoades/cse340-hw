@@ -204,6 +204,19 @@ nav {
   }
 }
 
+/* Detail View Display */
+.vehicle-detail-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 1rem;
+}
+
+.vehicle-image img {
+  max-width: 100%;
+  height: auto;
+}
+
 /******* FOOTER ***************/
 footer {
   color: var(--accent-color1);
@@ -253,5 +266,11 @@ footer {
   #inv-display {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Detail View Display */
+  .vehicle-detail-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
