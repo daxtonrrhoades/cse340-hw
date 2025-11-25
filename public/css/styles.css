@@ -217,6 +217,40 @@ nav {
   height: auto;
 }
 
+/* Login Account Page */
+.login {
+
+  & fieldset {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    max-width: fit-content;
+    justify-self: center;
+    border-radius: 1rem;
+
+    & button {
+      align-self: center;
+      width: 64px;
+      height: 44px;
+      margin: 1rem;
+      border-radius: 1rem;
+    }
+
+    & input[type=email],
+    input[type=password] {
+      align-self: center;
+      width: 220px;
+      padding: 0.25rem;
+      margin: 1rem;
+    }
+
+    & span {
+      text-align: center;
+    }
+  }
+}
+
+
 /******* FOOTER ***************/
 footer {
   color: var(--accent-color1);
