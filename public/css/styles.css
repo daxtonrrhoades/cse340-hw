@@ -250,6 +250,44 @@ nav {
   }
 }
 
+/* register page veiw */
+.register-form {
+
+  & fieldset {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    max-width: fit-content;
+    justify-self: center;
+    border-radius: 1rem;
+    border: 1px solid var(--accent-color1);
+  }
+
+  & button {
+    align-self: center;
+    width: 64px;
+    height: 44px;
+    margin: 1rem;
+    border-radius: 1rem;
+  }
+
+  & input[type=email],
+  input[type=password],
+  input[type=text] {
+    align-self: center;
+    width: 220px;
+    padding: 0.25rem;
+    margin: 1rem;
+  }
+}
+
+.password-requirements {
+  justify-self: center;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--accent-color1);
+}
 
 /******* FOOTER ***************/
 footer {
@@ -306,5 +344,19 @@ footer {
   .vehicle-detail-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* register page view */
+  .register {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+    & .register-form {
+      grid-column: 1;
+    }
+  }
+
+  .password-requirements {
+    grid-column: 2;
   }
 }
