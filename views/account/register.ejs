@@ -7,17 +7,17 @@
 <%- messages() %>
 
 <div  class="register">
-    <form action="account/register" method="post" class="register-form">
+    <form action="/account/register" method="post" class="register-form">
         <fieldset>
             <h2>Your Information</h2>
             <label for="first-name">* First name:</label>
-            <input type="text" name="firstName" id="first-name">
+            <input type="text" name="account_firstname" id="first-name" required>
             <label for="last-name">* Last name:</label>
-            <input type="text" name="lastName" id="last-name">
+            <input type="text" name="account_lastname" id="last-name" required>
             <label for="email">* Email:</label>
-            <input type="email" name="account_email" id="email">
+            <input type="email" name="account_email" id="email" required>
             <label for="password">* Password:</label>
-            <input type="password" name="account_password" id="password">
+            <input type="password" name="account_password" id="password" required>
             <button type="submit">Register</button>
             <p>* required</p>
         </fieldset>

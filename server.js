@@ -17,6 +17,7 @@ const inventoryRoute = require("./routes/inventoryRoute")
 const utilities = require("./utilities/")
 const errorRoute = require("./routes/errorRoute")
 const accountRoute = require("./routes/accountRoute")
+const bodyParser = require("body-parser")
 
 /* ***********************
  * Middleware
@@ -38,6 +39,10 @@ app.use(function (req, res, next) {
   res.locals.messages = require('express-messages')(req, res)
   next()
 })
+
+// body-parser extension middleare
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
 /* ***********************
  * View Engine and Templates
