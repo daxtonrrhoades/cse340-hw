@@ -9,10 +9,21 @@
 <form action="#" class="login">
     <fieldset>
         <label for="email">Email:</label>
-        <input type="email" name="account_email" id="email">
+        <input type="email" name="account_email" id="email" required>
         <label for="password">Password:</label>
-        <input type="password" name="account_password" id="password">
+        <input type="password" name="account_password" id="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$">
         <button type="submit">Login</button>
         <span>No account? <a href="../account/register">Sign-up</a></span>
     </fieldset>
 </form>
+
+<aside class="password-requirements">
+    <h2>Password Requirements</h2>
+    <span>Passwords must include the following: </span>
+    <ul>
+        <li>At least 12 characters</li>
+        <li>At least 1 capital letter</li>
+        <li>At least 1 number</li>
+        <li>At least 1 special character</li>
+    </ul>
+</aside>

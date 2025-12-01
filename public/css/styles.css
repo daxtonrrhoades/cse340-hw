@@ -227,6 +227,7 @@ nav {
     max-width: fit-content;
     justify-self: center;
     border-radius: 1rem;
+    border: 1px solid var(--accent-color1);
 
     & button {
       align-self: center;
@@ -242,6 +243,14 @@ nav {
       width: 220px;
       padding: 0.25rem;
       margin: 1rem;
+    }
+
+    & input:required:invalid {
+      border-left: solid 8px red;
+    }
+
+    & input:required:valid {
+      border-left: solid 8px green;
     }
 
     & span {
@@ -278,6 +287,14 @@ nav {
     width: 220px;
     padding: 0.25rem;
     margin: 1rem;
+  }
+
+  & input:required:invalid {
+    border-left: solid 8px red;
+  }
+
+  & input:required:valid {
+    border-left: solid 8px green;
   }
 }
 
