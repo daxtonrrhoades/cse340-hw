@@ -19,11 +19,11 @@
         <fieldset>
             <h2>Your Information</h2>
             <label for="first-name">* First name:</label>
-            <input type="text" name="account_firstname" id="first-name" required>
+            <input type="text" name="account_firstname" id="first-name" required value="<%= locals.account_firstname %>">
             <label for="last-name">* Last name:</label>
-            <input type="text" name="account_lastname" id="last-name" required>
+            <input type="text" name="account_lastname" id="last-name" required value="<%= locals.account_lastname %>">
             <label for="email">* Email:</label>
-            <input type="email" name="account_email" id="email" required>
+            <input type="email" name="account_email" id="email" required value="<%= locals.account_email %>">
             <label for="password">* Password:</label>
             <input type="password" name="account_password" id="password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$">
             <button type="submit">Register</button>
