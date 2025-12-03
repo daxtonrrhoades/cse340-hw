@@ -313,6 +313,8 @@ nav {
   max-width: 450px;
   margin: 1.25rem;
   padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--accent-color1);
 
   & input {
     max-width: 300px;
@@ -334,6 +336,51 @@ nav {
     color: var(--secondary-color);
     background-color: var(--accent-color1);
   }
+}
+
+#addInventoryForm fieldset {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  max-width: 450px;
+  margin: 1.25rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--accent-color1);
+
+  & textarea {
+    max-width: 300px;
+    max-height: 64px;
+  }
+
+  & input,
+  select {
+    max-width: 300px;
+    height: 32px;
+    margin-bottom: 1rem;
+  }
+
+  & input:valid {
+    border-left: solid 8px green;
+  }
+  
+  & input:invalid {
+    border-left: solid 8px red;
+  }
+
+  & button {
+    max-width: fit-content;
+    height: 48px;
+    color: var(--secondary-color);
+    background-color: var(--accent-color1);
+  }
+}
+
+.grey-field {
+  background-color: var(--accent-color2);
+  color: var(--accent-color1);
+  cursor: not-allowed;
 }
 
 /******* FOOTER ***************/
