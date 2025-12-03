@@ -66,7 +66,7 @@ Util.buildVehicleDetailHTML = async function (vehicle) {
         vehicleDetail = `
         <div class="vehicle-detail-container">
             <div class="vehicle-image">
-                <img src="${vehicle.inv_image}" alt="${vehicle.make}${vehicle.model}" >
+                <img src="${vehicle.inv_image}" alt="${vehicle.inv_make}${vehicle.inv_model}" >
             </div>
             <div class="vehicle-info">
                 <h1>${vehicle.inv_make} ${vehicle.inv_model}</h1>
