@@ -5,6 +5,7 @@
 /* ***********************
  * Require Statements
  *************************/
+const cookieParser = require("cookie-parser")
 const session = require("express-session")
 const pool = require('./database/')
 const express = require("express")
@@ -40,9 +41,15 @@ app.use(function (req, res, next) {
   next()
 })
 
-// body-parser extension middleare
+// body-parser package middleare
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
+
+// cookie-parser package middlewear
+app.use(cookieParser())
+
+// JWT Token Middlewear
+app.use(utilities.checkJWTToken)
 
 /* ***********************
  * View Engine and Templates
